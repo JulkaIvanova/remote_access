@@ -63,7 +63,7 @@ while True:
                         socketFuncs.send(connection, "Ошибка")
                     else:
                         socketFuncs.send(connection, "shut_down")
-
+            # Из-за проблем с кодировкой функция работает некорекктно
             elif incoming_data == "show_wi-fi_key":
                 socketFuncs.send(connection, 'Отправьте название сети')
                 name = socketFuncs.recv(connection, 1024)
